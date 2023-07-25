@@ -5,46 +5,50 @@
 class EnvTemplator < Formula
   desc ""
   homepage "https://github.com/Solidsilver/homebrew-tools"
-  version "1.0.13"
+  version "1.0.14"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.13/homebrew-tools_Darwin_arm64.tar.gz"
-      sha256 "618827de0ba092d1f115b14f784008b6e452d161052ab61f42464c9b79e29ad8"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.14/homebrew-tools_Darwin_arm64.tar.gz"
+      sha256 "6a9396aa46370dc6653942e665d691608238b37509a3eb33d59572a6968ecfb3"
 
       def install
         bin.install "amu"
         bin.install "env-templator"
+        bin.install "vcip"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.13/homebrew-tools_Darwin_x86_64.tar.gz"
-      sha256 "96404436f0a7de8092350a17cbd1472989724f4fde7e27c0ce05a1d5064e58fc"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.14/homebrew-tools_Darwin_x86_64.tar.gz"
+      sha256 "4ffb7c13525868aa968780ad22c42aa1bd8dff44c4c2026fb2a9b454fcec439c"
 
       def install
         bin.install "amu"
         bin.install "env-templator"
+        bin.install "vcip"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.13/homebrew-tools_Linux_arm64.tar.gz"
-      sha256 "43081452787d305b8b0516405edf8e1d4c0573804d5353954df69e85fc90c492"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.14/homebrew-tools_Linux_arm64.tar.gz"
+      sha256 "86c87e1f84b8dac53433c03335839bc210cd514fdf2110267e0a95bb2eaf7de9"
 
       def install
         bin.install "amu"
         bin.install "env-templator"
+        bin.install "vcip"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.13/homebrew-tools_Linux_x86_64.tar.gz"
-      sha256 "b684f254e040ea50ae056764eec4f8af56a7b3668484a181f9ce54b28aefb50d"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.14/homebrew-tools_Linux_x86_64.tar.gz"
+      sha256 "a086a0a7e1beffe808c990aac17d2f8d6a4981bdcc079c130ee8a710551735f9"
 
       def install
         bin.install "amu"
         bin.install "env-templator"
+        bin.install "vcip"
       end
     end
   end
