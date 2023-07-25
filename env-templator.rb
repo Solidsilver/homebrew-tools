@@ -5,41 +5,45 @@
 class EnvTemplator < Formula
   desc ""
   homepage "https://github.com/Solidsilver/homebrew-tools"
-  version "0.1.4"
+  version "1.0.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Solidsilver/go-fs-tools/releases/download/v0.1.4/go-fs-tools_Darwin_arm64.tar.gz"
-      sha256 "427a86f8d9a4565cb60b1f0a561bf2583c0060648744361f92064ad33e86af6e"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.12/homebrew-tools_Darwin_arm64.tar.gz"
+      sha256 "b7991e9b4fe804d39df7f864272bfe1e1cdf8a100fb67bcdbbbee2bad560c753"
 
       def install
+        bin.install "amu"
         bin.install "env-templator"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/go-fs-tools/releases/download/v0.1.4/go-fs-tools_Darwin_x86_64.tar.gz"
-      sha256 "563fda7347a91abb1eb6e8984d02b6e5a48abcbd0c86938db7f9307661e796e4"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.12/homebrew-tools_Darwin_x86_64.tar.gz"
+      sha256 "420e24670edd9ac23085d2a38f43de93241a6031b8ebcc8bc0efdf479bc629cf"
 
       def install
+        bin.install "amu"
         bin.install "env-templator"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/go-fs-tools/releases/download/v0.1.4/go-fs-tools_Linux_x86_64.tar.gz"
-      sha256 "8e5577c9f69f7b199a2a2e758a596b37b7800c0381eafc9df7c2fd75a2bbc7f9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.12/homebrew-tools_Linux_arm64.tar.gz"
+      sha256 "736061a222c11e3a18ea1897352e1490d8028c3616fd2957226593099dceb129"
 
       def install
+        bin.install "amu"
         bin.install "env-templator"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Solidsilver/go-fs-tools/releases/download/v0.1.4/go-fs-tools_Linux_arm64.tar.gz"
-      sha256 "afc908906a070b8739d2dca648121d761910c30551958afbb88c8f73f88f9a2e"
+    if Hardware::CPU.intel?
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.12/homebrew-tools_Linux_x86_64.tar.gz"
+      sha256 "f0029845510d44c1825ef4bfdda68cab8b63c242cc0feea1fb687475cdf3083e"
 
       def install
+        bin.install "amu"
         bin.install "env-templator"
       end
     end
