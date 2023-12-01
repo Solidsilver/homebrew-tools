@@ -5,12 +5,12 @@
 class Dtools < Formula
   desc ""
   homepage "https://github.com/Solidsilver/homebrew-tools"
-  version "1.0.16"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.16/homebrew-tools_Darwin_arm64.tar.gz"
-      sha256 "dbb92facd8aa8ae47a483c62d3985c8b19236d9efc9e9bf9e6ae654be9f9d916"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.1.0/homebrew-tools_Darwin_arm64.tar.gz"
+      sha256 "af8d6ee3bab9a09ef47aae7dc15f490a9297dd352f3c012319f34767574aca60"
 
       def install
         bin.install "amu"
@@ -19,8 +19,8 @@ class Dtools < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.16/homebrew-tools_Darwin_x86_64.tar.gz"
-      sha256 "2df5455fcfe9c7f02c57572979fef4bd2d746d0d2a2b3aa2bc2db76399ca3766"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.1.0/homebrew-tools_Darwin_x86_64.tar.gz"
+      sha256 "5cc8995cd97949eb524310cf3569028122e1d4fa8a98359788176d0ceecb04ea"
 
       def install
         bin.install "amu"
@@ -32,8 +32,8 @@ class Dtools < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.16/homebrew-tools_Linux_arm64.tar.gz"
-      sha256 "8a0cc477dc491e97948e9ab24fbce892ac1fe541e301b11d5249ae01dc5c9bbc"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.1.0/homebrew-tools_Linux_arm64.tar.gz"
+      sha256 "259272ccc009c2c6f1a29cd7262194d774bff1865cd22cf7f9ab5a8d28a073fe"
 
       def install
         bin.install "amu"
@@ -42,8 +42,8 @@ class Dtools < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.0.16/homebrew-tools_Linux_x86_64.tar.gz"
-      sha256 "15fe3098148cd1bc2fc1fcb5ad50a4033fcf53b8fe648fba8168b6eb53fedf06"
+      url "https://github.com/Solidsilver/homebrew-tools/releases/download/v1.1.0/homebrew-tools_Linux_x86_64.tar.gz"
+      sha256 "2b66c6b634f89750d25dc3499c8908cf7963221153d42bf6483b318b4d08e8f7"
 
       def install
         bin.install "amu"
